@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */; };
 		B46719B02628F29400377E27 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AF2628F29400377E27 /* News.swift */; };
+		B46719B42628F31A00377E27 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719B32628F31A00377E27 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		B467199C2628ED8700377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopHeadlinesNews.swift; sourceTree = "<group>"; };
 		B46719AF2628F29400377E27 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		B46719B32628F31A00377E27 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B46719AF2628F29400377E27 /* News.swift */,
+				B46719B32628F31A00377E27 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46719B42628F31A00377E27 /* Model.swift in Sources */,
 				B46719B02628F29400377E27 /* News.swift in Sources */,
 				B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */,
 			);
