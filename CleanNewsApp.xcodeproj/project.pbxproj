@@ -6,9 +6,16 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */; };
+		B46719B02628F29400377E27 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AF2628F29400377E27 /* News.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B46719992628ED8700377E27 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B467199C2628ED8700377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopHeadlinesNews.swift; sourceTree = "<group>"; };
+		B46719AF2628F29400377E27 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,9 +48,27 @@
 		B467199A2628ED8700377E27 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B46719AA2628EF2200377E27 /* UseCase */,
+				B46719AE2628F27D00377E27 /* Model */,
 				B467199C2628ED8700377E27 /* Info.plist */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		B46719AA2628EF2200377E27 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B46719AE2628F27D00377E27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B46719AF2628F29400377E27 /* News.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +113,7 @@
 				TargetAttributes = {
 					B46719982628ED8700377E27 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -124,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46719B02628F29400377E27 /* News.swift in Sources */,
+				B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +283,7 @@
 		B467199F2628ED8700377E27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -274,6 +303,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -281,6 +311,7 @@
 		B46719A02628ED8700377E27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
