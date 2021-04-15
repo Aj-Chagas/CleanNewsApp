@@ -6,55 +6,10 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		B46719812628ECF000377E27 /* CleanNewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719772628ECF000377E27 /* CleanNewsApp.framework */; };
-		B46719862628ECF100377E27 /* CleanNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719852628ECF100377E27 /* CleanNewsAppTests.swift */; };
-		B46719882628ECF100377E27 /* CleanNewsApp.h in Headers */ = {isa = PBXBuildFile; fileRef = B467197A2628ECF000377E27 /* CleanNewsApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B46719822628ECF000377E27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B467196E2628ECF000377E27 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B46719762628ECF000377E27;
-			remoteInfo = CleanNewsApp;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		B46719772628ECF000377E27 /* CleanNewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CleanNewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B467197A2628ECF000377E27 /* CleanNewsApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CleanNewsApp.h; sourceTree = "<group>"; };
-		B467197B2628ECF000377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B46719802628ECF000377E27 /* CleanNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46719852628ECF100377E27 /* CleanNewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanNewsAppTests.swift; sourceTree = "<group>"; };
-		B46719872628ECF100377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		B46719742628ECF000377E27 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B467197D2628ECF000377E27 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B46719812628ECF000377E27 /* CleanNewsApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
 		B467196D2628ECF000377E27 = {
 			isa = PBXGroup;
 			children = (
-				B46719792628ECF000377E27 /* CleanNewsApp */,
-				B46719842628ECF100377E27 /* CleanNewsAppTests */,
 				B46719782628ECF000377E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,81 +17,11 @@
 		B46719782628ECF000377E27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B46719772628ECF000377E27 /* CleanNewsApp.framework */,
-				B46719802628ECF000377E27 /* CleanNewsAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B46719792628ECF000377E27 /* CleanNewsApp */ = {
-			isa = PBXGroup;
-			children = (
-				B467197A2628ECF000377E27 /* CleanNewsApp.h */,
-				B467197B2628ECF000377E27 /* Info.plist */,
-			);
-			path = CleanNewsApp;
-			sourceTree = "<group>";
-		};
-		B46719842628ECF100377E27 /* CleanNewsAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				B46719852628ECF100377E27 /* CleanNewsAppTests.swift */,
-				B46719872628ECF100377E27 /* Info.plist */,
-			);
-			path = CleanNewsAppTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		B46719722628ECF000377E27 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B46719882628ECF100377E27 /* CleanNewsApp.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		B46719762628ECF000377E27 /* CleanNewsApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B467198B2628ECF100377E27 /* Build configuration list for PBXNativeTarget "CleanNewsApp" */;
-			buildPhases = (
-				B46719722628ECF000377E27 /* Headers */,
-				B46719732628ECF000377E27 /* Sources */,
-				B46719742628ECF000377E27 /* Frameworks */,
-				B46719752628ECF000377E27 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CleanNewsApp;
-			productName = CleanNewsApp;
-			productReference = B46719772628ECF000377E27 /* CleanNewsApp.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B467197F2628ECF000377E27 /* CleanNewsAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B467198E2628ECF100377E27 /* Build configuration list for PBXNativeTarget "CleanNewsAppTests" */;
-			buildPhases = (
-				B467197C2628ECF000377E27 /* Sources */,
-				B467197D2628ECF000377E27 /* Frameworks */,
-				B467197E2628ECF000377E27 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B46719832628ECF000377E27 /* PBXTargetDependency */,
-			);
-			name = CleanNewsAppTests;
-			productName = CleanNewsAppTests;
-			productReference = B46719802628ECF000377E27 /* CleanNewsAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B467196E2628ECF000377E27 /* Project object */ = {
@@ -144,14 +29,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
-				TargetAttributes = {
-					B46719762628ECF000377E27 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					B467197F2628ECF000377E27 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-				};
 			};
 			buildConfigurationList = B46719712628ECF000377E27 /* Build configuration list for PBXProject "CleanNewsApp" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -166,54 +43,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B46719762628ECF000377E27 /* CleanNewsApp */,
-				B467197F2628ECF000377E27 /* CleanNewsAppTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		B46719752628ECF000377E27 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B467197E2628ECF000377E27 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		B46719732628ECF000377E27 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B467197C2628ECF000377E27 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B46719862628ECF100377E27 /* CleanNewsAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B46719832628ECF000377E27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B46719762628ECF000377E27 /* CleanNewsApp */;
-			targetProxy = B46719822628ECF000377E27 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B46719892628ECF100377E27 /* Debug */ = {
@@ -338,90 +170,6 @@
 			};
 			name = Release;
 		};
-		B467198C2628ECF100377E27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TA48V9TKT7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CleanNewsApp/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonchagas.CleanNewsApp;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B467198D2628ECF100377E27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TA48V9TKT7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CleanNewsApp/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonchagas.CleanNewsApp;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B467198F2628ECF100377E27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TA48V9TKT7;
-				INFOPLIST_FILE = CleanNewsAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonchagas.CleanNewsAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B46719902628ECF100377E27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TA48V9TKT7;
-				INFOPLIST_FILE = CleanNewsAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonchagas.CleanNewsAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,24 +178,6 @@
 			buildConfigurations = (
 				B46719892628ECF100377E27 /* Debug */,
 				B467198A2628ECF100377E27 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B467198B2628ECF100377E27 /* Build configuration list for PBXNativeTarget "CleanNewsApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B467198C2628ECF100377E27 /* Debug */,
-				B467198D2628ECF100377E27 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B467198E2628ECF100377E27 /* Build configuration list for PBXNativeTarget "CleanNewsAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B467198F2628ECF100377E27 /* Debug */,
-				B46719902628ECF100377E27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
