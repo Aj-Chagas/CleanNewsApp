@@ -11,10 +11,11 @@
 		B46719B02628F29400377E27 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AF2628F29400377E27 /* News.swift */; };
 		B46719B42628F31A00377E27 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719B32628F31A00377E27 /* Model.swift */; };
 		B46719C42628F38700377E27 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
-		B46719C92628F38700377E27 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719C82628F38700377E27 /* DataTests.swift */; };
-		B46719CB2628F38700377E27 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = B46719BD2628F38700377E27 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B46719C92628F38700377E27 /* RemoteGetTopNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719C82628F38700377E27 /* RemoteGetTopNewsTests.swift */; };
 		B46719D62628F38E00377E27 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B46719D72628F38E00377E27 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B46719E12628FE7300377E27 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719E02628FE7300377E27 /* DataExtensions.swift */; };
+		B46719E82628FFFC00377E27 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719E72628FFFC00377E27 /* DomainError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +56,12 @@
 		B46719AF2628F29400377E27 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		B46719B32628F31A00377E27 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B46719BB2628F38700377E27 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46719BD2628F38700377E27 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		B46719BE2628F38700377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46719C32628F38700377E27 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B46719C82628F38700377E27 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		B46719C82628F38700377E27 /* RemoteGetTopNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetTopNewsTests.swift; sourceTree = "<group>"; };
 		B46719CA2628F38700377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B46719E02628FE7300377E27 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		B46719E72628FFFC00377E27 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B46719AA2628EF2200377E27 /* UseCase */,
+				B46719E62628FFDB00377E27 /* Errors */,
 				B46719AE2628F27D00377E27 /* Model */,
 				B467199C2628ED8700377E27 /* Info.plist */,
 			);
@@ -140,7 +143,7 @@
 		B46719BC2628F38700377E27 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B46719BD2628F38700377E27 /* Data.h */,
+				B46719DF2628FE5C00377E27 /* Helpers */,
 				B46719BE2628F38700377E27 /* Info.plist */,
 			);
 			path = Data;
@@ -149,7 +152,7 @@
 		B46719C72628F38700377E27 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				B46719C82628F38700377E27 /* DataTests.swift */,
+				B46719C82628F38700377E27 /* RemoteGetTopNewsTests.swift */,
 				B46719CA2628F38700377E27 /* Info.plist */,
 			);
 			path = DataTests;
@@ -160,6 +163,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B46719DF2628FE5C00377E27 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B46719E02628FE7300377E27 /* DataExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B46719E62628FFDB00377E27 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B46719E72628FFFC00377E27 /* DomainError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +195,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46719CB2628F38700377E27 /* Data.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +272,7 @@
 					};
 					B46719BA2628F38700377E27 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					B46719C22628F38700377E27 = {
 						CreatedOnToolsVersion = 12.4;
@@ -311,6 +330,7 @@
 			files = (
 				B46719B42628F31A00377E27 /* Model.swift in Sources */,
 				B46719B02628F29400377E27 /* News.swift in Sources */,
+				B46719E82628FFFC00377E27 /* DomainError.swift in Sources */,
 				B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46719E12628FE7300377E27 /* DataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B46719C92628F38700377E27 /* DataTests.swift in Sources */,
+				B46719C92628F38700377E27 /* RemoteGetTopNewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +547,7 @@
 		B46719CD2628F38700377E27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -545,6 +567,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -552,6 +575,7 @@
 		B46719CE2628F38700377E27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -578,6 +602,7 @@
 		B46719D02628F38700377E27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
@@ -598,6 +623,7 @@
 		B46719D12628F38700377E27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;

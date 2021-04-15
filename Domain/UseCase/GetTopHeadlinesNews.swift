@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol GetTopHeadlineNews {
-    func getTopHeadlineNews(completion: @escaping (Result<News, Error>) -> Void)
+    func getTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void)
 }
