@@ -9,18 +9,6 @@ import XCTest
 import Data
 import Domain
 
-public protocol HttpGetClient {
-    func get(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void)
-}
-
-public enum HttpError: Error {
-    case noConnectivy
-    case badRequest
-    case serverError
-    case unauthorized
-    case forbideen
-}
-
 public final class RemoteGetTopNews: GetTopHeadlineNews {
     
     private let httpGetClient: HttpGetClient
