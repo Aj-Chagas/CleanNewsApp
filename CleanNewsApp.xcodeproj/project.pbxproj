@@ -19,6 +19,7 @@
 		B46719EF2629130F00377E27 /* HttpGetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719EE2629130F00377E27 /* HttpGetClient.swift */; };
 		B46719F32629133900377E27 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F22629133900377E27 /* HttpError.swift */; };
 		B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F72629139900377E27 /* RemoteGetTopNews.swift */; };
+		B4671A02262913F300377E27 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A01262913F300377E27 /* HttpClientSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		B46719EE2629130F00377E27 /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
 		B46719F22629133900377E27 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		B46719F72629139900377E27 /* RemoteGetTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetTopNews.swift; sourceTree = "<group>"; };
+		B4671A01262913F300377E27 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +162,8 @@
 		B46719C72628F38700377E27 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				B46719C82628F38700377E27 /* RemoteGetTopNewsTests.swift */,
+				B4671A00262913E000377E27 /* Http */,
+				B46719FB262913D900377E27 /* UseCase */,
 				B46719CA2628F38700377E27 /* Info.plist */,
 			);
 			path = DataTests;
@@ -204,6 +207,22 @@
 				B46719F72629139900377E27 /* RemoteGetTopNews.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B46719FB262913D900377E27 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B46719C82628F38700377E27 /* RemoteGetTopNewsTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B4671A00262913E000377E27 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				B4671A01262913F300377E27 /* HttpClientSpy.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46719C92628F38700377E27 /* RemoteGetTopNewsTests.swift in Sources */,
+				B4671A02262913F300377E27 /* HttpClientSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
