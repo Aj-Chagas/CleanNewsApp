@@ -164,9 +164,9 @@
 		B46719C72628F38700377E27 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4671A072629147900377E27 /* Helpers */,
-				B4671A00262913E000377E27 /* Http */,
 				B46719FB262913D900377E27 /* UseCase */,
+				B4671A00262913E000377E27 /* Http */,
+				B4671A072629147900377E27 /* Helpers */,
 				B46719CA2628F38700377E27 /* Info.plist */,
 			);
 			path = DataTests;
