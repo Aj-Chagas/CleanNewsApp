@@ -82,10 +82,8 @@ extension RemoteGetTopNewsTests {
     func makeSut(url: URL = URL(string: "any_url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (RemoteGetTopNews, HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteGetTopNews(httpGetClient: httpClientSpy, url: url)
-        addTeardownBlock { [weak sut, weak httpClientSpy] in
-            XCTAssertNil(sut, file: file, line: line)
-            XCTAssertNil(httpClientSpy, file: file, line: line)
-        }
+        checkMemoryLeak(for: sut)
+        checkMemoryLeak(for: httpClientSpy)
         return (sut, httpClientSpy)
     }
     
