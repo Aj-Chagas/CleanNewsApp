@@ -18,6 +18,7 @@
 		B46719E82628FFFC00377E27 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719E72628FFFC00377E27 /* DomainError.swift */; };
 		B46719EF2629130F00377E27 /* HttpGetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719EE2629130F00377E27 /* HttpGetClient.swift */; };
 		B46719F32629133900377E27 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F22629133900377E27 /* HttpError.swift */; };
+		B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F72629139900377E27 /* RemoteGetTopNews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		B46719E72628FFFC00377E27 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		B46719EE2629130F00377E27 /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
 		B46719F22629133900377E27 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		B46719F72629139900377E27 /* RemoteGetTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetTopNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		B46719BC2628F38700377E27 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B46719F62629138700377E27 /* UseCase */,
 				B46719ED262912EA00377E27 /* Http */,
 				B46719DF2628FE5C00377E27 /* Helpers */,
 				B46719BE2628F38700377E27 /* Info.plist */,
@@ -193,6 +196,14 @@
 				B46719F22629133900377E27 /* HttpError.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		B46719F62629138700377E27 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B46719F72629139900377E27 /* RemoteGetTopNews.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46719E12628FE7300377E27 /* DataExtensions.swift in Sources */,
+				B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */,
 				B46719F32629133900377E27 /* HttpError.swift in Sources */,
 				B46719EF2629130F00377E27 /* HttpGetClient.swift in Sources */,
 			);
