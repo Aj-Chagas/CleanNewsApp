@@ -57,20 +57,7 @@ class InfraTests: XCTestCase {
     }
     
     func test_get_should_complete_with_error_when_received_error() {
-        let sut = makeSut()
-        let exp = expectation(description: "Waiting")
-        let url = URL(string: "http://any-url.com")!
-        URLProtocolStubs.requestSimulate(data: nil, response: nil, error: makeError())
-    
-        sut.get(to: url) { result in
-            switch result {
-            case .success: XCTFail("expected error and received success instead")
-            case .failure(let receivedError): XCTAssertEqual(receivedError, .noConnectivy)
-            }
-            
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 5)
+        expectResult(.failure(.noConnectivy), when: (data: nil, response: nil, error: makeError()))
     }
 
 }
@@ -83,9 +70,32 @@ extension InfraTests {
         let sut = URLSessionAdapter(session: session)
         return sut
     }
+    
+    func expectResult(_ expectedResult: Result<Data?, HttpError>,
+                      when stub: (data: Data?, response: HTTPURLResponse?, error: Error?),
+                      file: StaticString = #filePath, line: UInt = #line) {
+        let sut = makeSut()
+        let exp = expectation(description: "Waiting")
+        URLProtocolStubs.requestSimulate(data: stub.data, response: stub.response, error: stub.error)
+    
+        sut.get(to: makeUrl()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedSuccess), .success(let receivedSuccess)): XCTAssertEqual(expectedSuccess, receivedSuccess, file: file, line: line)
+            default: XCTFail("expected \(expectedResult) got \(receivedResult) instead")
+            }
+            
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5)
+    }
 
     func makeError() -> NSError {
         NSError(domain: "any_error", code: 0)
+    }
+    
+    func makeUrl() -> URL {
+        URL(string: "http://any-url.com")!
     }
 }
 
