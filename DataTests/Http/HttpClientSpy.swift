@@ -10,12 +10,10 @@ import Data
 
 class HttpClientSpy: HttpGetClient {
     var url: URL?
-    var data: Data?
     var completion: ((Result<Data?, HttpError>) -> Void)?
     
-    func get(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+    func get(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.url = url
-        self.data = data
         self.completion = completion
     }
     
