@@ -55,6 +55,23 @@ class InfraTests: XCTestCase {
         XCTAssertEqual(url, request?.url)
         XCTAssertEqual("GET", request?.httpMethod)
     }
+    
+    func test_get_should_complete_with_error_when_received_error() {
+        let sut = makeSut()
+        let exp = expectation(description: "Waiting")
+        let url = URL(string: "http://any-url.com")!
+        URLProtocolStubs.requestSimulate(data: nil, response: nil, error: makeError())
+    
+        sut.get(to: url) { result in
+            switch result {
+            case .success: XCTFail("expected error and received success instead")
+            case .failure(let receivedError): XCTAssertEqual(receivedError, .noConnectivy)
+            }
+            
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5)
+    }
 
 }
 
@@ -65,6 +82,10 @@ extension InfraTests {
         let session = URLSession(configuration: configuration)
         let sut = URLSessionAdapter(session: session)
         return sut
+    }
+
+    func makeError() -> NSError {
+        NSError(domain: "any_error", code: 0)
     }
 }
 
