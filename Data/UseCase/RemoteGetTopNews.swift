@@ -20,7 +20,7 @@ public final class RemoteGetTopNews: GetTopHeadlineNews {
 
     public func getTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void) {
         httpGetClient.get(to: url) { [weak self] result in
-             guard self != nil else { return }
+            guard self != nil else { return }
             switch result {
             case .success(let data):
                 if let model: News = data?.toModel() {

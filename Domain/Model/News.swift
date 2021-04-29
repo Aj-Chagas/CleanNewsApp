@@ -8,9 +8,9 @@
 import Foundation
 
 public struct News: Model {
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
+    let status: String?
+    let totalResults: Int?
+    let articles: [Article]?
     
     public init(status: String,
                 totalResults: Int,
@@ -22,14 +22,14 @@ public struct News: Model {
 }
 
 public struct Article: Model {
-    let source: Source
-    let author: String
-    let title: String
-    let description: String
-    let url: String
-    let urlToImage: String
-    let publishedAt: Date
-    let content: String
+    let source: Source?
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: String?
+    let urlToImage: String?
+    let publishedAt: String?
+    let content: String?
     
     public init(source: Source,
                 author: String,
@@ -37,7 +37,7 @@ public struct Article: Model {
                 description: String,
                 url: String,
                 urlToImage: String,
-                publishedAt: Date,
+                publishedAt: String,
                 content: String) {
         self.source = source
         self.author = author
@@ -52,7 +52,7 @@ public struct Article: Model {
 
 public struct Source: Model {
     let id: String?
-    let name: String
+    let name: String?
     
     public init(id: String?,
                 name: String) {
