@@ -25,6 +25,7 @@
 		B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F72629139900377E27 /* RemoteGetTopNews.swift */; };
 		B4671A02262913F300377E27 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A01262913F300377E27 /* HttpClientSpy.swift */; };
 		B4671A092629148E00377E27 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
+		B4707D16263B6CB6007D230C /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D15263B6CB6007D230C /* URLSessionAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		B46719F72629139900377E27 /* RemoteGetTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetTopNews.swift; sourceTree = "<group>"; };
 		B4671A01262913F300377E27 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		B4671A082629148E00377E27 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		B4707D15263B6CB6007D230C /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		B45B873B2637827C00883B92 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				B4707D15263B6CB6007D230C /* URLSessionAdapter.swift */,
 				B45B873D2637827C00883B92 /* Info.plist */,
 			);
 			path = Infra;
@@ -439,6 +442,7 @@
 				TargetAttributes = {
 					B45B87392637827C00883B92 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					B45B87412637827D00883B92 = {
 						CreatedOnToolsVersion = 12.4;
@@ -521,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4707D16263B6CB6007D230C /* URLSessionAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +598,7 @@
 		B45B874B2637827D00883B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -612,6 +618,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -619,6 +626,7 @@
 		B45B874C2637827D00883B92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -645,6 +653,7 @@
 		B45B874D2637827D00883B92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
@@ -665,6 +674,7 @@
 		B45B874E2637827D00883B92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
