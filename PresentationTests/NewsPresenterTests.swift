@@ -56,22 +56,26 @@ class NewsPresenterTests: XCTestCase {
 
     func test_fetchNews_should_show_loading_when_call_webService() {
         let loadingView = LoadingViewSpy()
-        let fetchTopHealineNews = FetchTopHeadlineNewsSpy()
-        let delegate = NewsDelegateSpy()
-        let sut = NewsPresenter(loadingView: loadingView,
-                                 fetchTopHealineNews: fetchTopHealineNews,
-                                 delegate: delegate)
+        let sut = makeSut(loadingView: loadingView)
         
         sut.fetchNews()
         
-        XCTAssertTrue((loadingView.isLoadingSpy))
-        checkMemoryLeak(for: sut)
-        
+        XCTAssertTrue(loadingView.isLoadingSpy)
     }
 
 }
 
 extension NewsPresenterTests {
+    
+    func makeSut(loadingView: LoadingViewSpy = LoadingViewSpy(),
+                 fetchTopHealineNews: FetchTopHeadlineNewsSpy = FetchTopHeadlineNewsSpy(),
+                 delegate: NewsDelegateSpy = NewsDelegateSpy()) -> NewsPresenter {
+        let sut = NewsPresenter(loadingView: loadingView,
+                      fetchTopHealineNews: fetchTopHealineNews,
+                      delegate: delegate)
+        checkMemoryLeak(for: sut)
+        return sut
+    }
     
     class NewsDelegateSpy: NewsDelegate {
         
