@@ -11,7 +11,7 @@
 		B45B87482637827D00883B92 /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B87472637827D00883B92 /* InfraTests.swift */; };
 		B45B8755263782B100883B92 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
 		B45B8756263782B100883B92 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */; };
+		B46719AC2628EF9100377E27 /* FetchTopHeadlineNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AB2628EF9100377E27 /* FetchTopHeadlineNews.swift */; };
 		B46719B02628F29400377E27 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719AF2628F29400377E27 /* News.swift */; };
 		B46719B42628F31A00377E27 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719B32628F31A00377E27 /* Model.swift */; };
 		B46719C42628F38700377E27 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
@@ -35,6 +35,7 @@
 		B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */; };
 		B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +148,7 @@
 		B45B87492637827D00883B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B46719992628ED8700377E27 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B467199C2628ED8700377E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTopHeadlinesNews.swift; sourceTree = "<group>"; };
+		B46719AB2628EF9100377E27 /* FetchTopHeadlineNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTopHeadlineNews.swift; sourceTree = "<group>"; };
 		B46719AF2628F29400377E27 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		B46719B32628F31A00377E27 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B46719BB2628F38700377E27 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,7 +306,7 @@
 		B46719AA2628EF2200377E27 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B46719AB2628EF9100377E27 /* GetTopHeadlinesNews.swift */,
+				B46719AB2628EF9100377E27 /* FetchTopHeadlineNews.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -783,7 +784,7 @@
 				B46719B42628F31A00377E27 /* Model.swift in Sources */,
 				B46719B02628F29400377E27 /* News.swift in Sources */,
 				B46719E82628FFFC00377E27 /* DomainError.swift in Sources */,
-				B46719AC2628EF9100377E27 /* GetTopHeadlinesNews.swift in Sources */,
+				B46719AC2628EF9100377E27 /* FetchTopHeadlineNews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +830,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */,
+				B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
