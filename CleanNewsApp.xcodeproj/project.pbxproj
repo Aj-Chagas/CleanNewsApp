@@ -37,6 +37,10 @@
 		B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
 		B4AA7D45264090620039A6C5 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D2C263B6DF8007D230C /* TestFactories.swift */; };
+		B4AA7D4D264099610039A6C5 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D4C264099610039A6C5 /* NewsPresenter.swift */; };
+		B4AA7D55264099B40039A6C5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D54264099B40039A6C5 /* LoadingView.swift */; };
+		B4AA7D5E26409AED0039A6C5 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D5D26409AED0039A6C5 /* LoadingViewSpy.swift */; };
+		B4AA7D6B26409B360039A6C5 /* FetchTopHealineNewsSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D6A26409B360039A6C5 /* FetchTopHealineNewsSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +179,10 @@
 		B4AA7CF9264082F60039A6C5 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenterTests.swift; sourceTree = "<group>"; };
 		B4AA7D00264082F60039A6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4AA7D4C264099610039A6C5 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		B4AA7D54264099B40039A6C5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B4AA7D5D26409AED0039A6C5 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
+		B4AA7D6A26409B360039A6C5 /* FetchTopHealineNewsSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTopHealineNewsSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +445,8 @@
 		B4AA7CF2264082F60039A6C5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B4AA7D53264099A00039A6C5 /* Views */,
+				B4AA7D4B264099480039A6C5 /* Presenters */,
 				B4AA7CF4264082F60039A6C5 /* Info.plist */,
 			);
 			path = Presentation;
@@ -445,10 +455,52 @@
 		B4AA7CFD264082F60039A6C5 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */,
+				B4AA7D6926409B140039A6C5 /* UseCases */,
+				B4AA7D5C26409AAA0039A6C5 /* Views */,
+				B4AA7D5B26409AA10039A6C5 /* Presenters */,
 				B4AA7D00264082F60039A6C5 /* Info.plist */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		B4AA7D4B264099480039A6C5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA7D4C264099610039A6C5 /* NewsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		B4AA7D53264099A00039A6C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA7D54264099B40039A6C5 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4AA7D5B26409AA10039A6C5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		B4AA7D5C26409AAA0039A6C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA7D5D26409AED0039A6C5 /* LoadingViewSpy.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4AA7D6926409B140039A6C5 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA7D6A26409B360039A6C5 /* FetchTopHealineNewsSpy.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,6 +721,7 @@
 					};
 					B4AA7CF0264082F60039A6C5 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					B4AA7CF8264082F60039A6C5 = {
 						CreatedOnToolsVersion = 12.4;
@@ -823,6 +876,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AA7D4D264099610039A6C5 /* NewsPresenter.swift in Sources */,
+				B4AA7D55264099B40039A6C5 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,9 +885,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AA7D5E26409AED0039A6C5 /* LoadingViewSpy.swift in Sources */,
 				B4AA7D45264090620039A6C5 /* TestFactories.swift in Sources */,
 				B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */,
 				B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */,
+				B4AA7D6B26409B360039A6C5 /* FetchTopHealineNewsSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,6 +1358,7 @@
 		B4AA7D02264082F60039A6C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1320,6 +1378,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1327,6 +1386,7 @@
 		B4AA7D03264082F60039A6C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1353,6 +1413,7 @@
 		B4AA7D04264082F60039A6C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
@@ -1373,6 +1434,7 @@
 		B4AA7D05264082F60039A6C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
