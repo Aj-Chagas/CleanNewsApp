@@ -47,6 +47,7 @@ public final class NewsPresenter {
             case .success(let news): self.delegate.didFetch(news: news)
             case .failure: self.delegate.didFetch(news: nil)
             }
+            self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
         }
     }
     
@@ -58,9 +59,28 @@ class NewsPresenterTests: XCTestCase {
         let loadingView = LoadingViewSpy()
         let sut = makeSut(loadingView: loadingView)
         
+        let exp = expectation(description: "Waiting")
+        loadingView.observer { viewModel in
+            XCTAssertTrue(viewModel.isLoading)
+            exp.fulfill()
+        }
         sut.fetchNews()
-        
-        XCTAssertTrue(loadingView.isLoadingSpy)
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_fetchNews_should_not_show_loading_after_received_callback_webService() {
+        let loadingView = LoadingViewSpy()
+        let fetchHealineNewsSpy = FetchTopHeadlineNewsSpy()
+        let sut = makeSut(loadingView: loadingView, fetchTopHealineNews:  fetchHealineNewsSpy)
+        sut.fetchNews()
+
+        let exp = expectation(description: "waiting...")
+        loadingView.observer { viewModel in
+            XCTAssertFalse(viewModel.isLoading)
+            exp.fulfill()
+        }
+        fetchHealineNewsSpy.completionWithNews(news: makeNews())
+        wait(for: [exp], timeout: 1)
     }
 
 }
@@ -89,12 +109,14 @@ extension NewsPresenterTests {
     
     class LoadingViewSpy: LoadingView {
         
-        var isLoadingSpy: Bool = false
-        
-        public init() {}
+        var emit: ((LoadingViewModel) -> Void)?
         
         func display(viewModel: LoadingViewModel) {
-            isLoadingSpy = viewModel.isLoading
+            emit?(viewModel)
+        }
+        
+        func observer(completion: @escaping (LoadingViewModel) -> Void) {
+            self.emit = completion
         }
     }
     

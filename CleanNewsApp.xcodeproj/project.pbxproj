@@ -36,6 +36,7 @@
 		B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
+		B4AA7D45264090620039A6C5 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D2C263B6DF8007D230C /* TestFactories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -829,6 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AA7D45264090620039A6C5 /* TestFactories.swift in Sources */,
 				B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */,
 				B4AA7D3426408A7A0039A6C5 /* TestExtensions.swift in Sources */,
 			);
