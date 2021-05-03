@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-public final class RemoteGetTopNews: GetTopHeadlineNews {
+public final class RemoteFetchTopNews: FetchTopHeadlineNews {
     
     private let httpGetClient: HttpGetClient
     private let url: URL
@@ -18,7 +18,7 @@ public final class RemoteGetTopNews: GetTopHeadlineNews {
         self.url = url
     }
 
-    public func getTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void) {
+    public func fetchTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void) {
         httpGetClient.get(to: url) { [weak self] result in
             guard self != nil else { return }
             switch result {

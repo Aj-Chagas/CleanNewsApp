@@ -14,7 +14,7 @@ class RemoteGetTopNewsTests: XCTestCase {
     func test_getTopHeadlineNews_should_call_httpClient_with_correct_url() {
         let url = URL(string: "any_url.com")!
         let (sut, httpCLient) = makeSut(url: url)
-        sut.getTopHeadlineNews { _ in }
+        sut.fetchTopHeadlineNews { _ in }
         XCTAssertEqual(httpCLient.url, url)
     }
 
@@ -44,9 +44,9 @@ class RemoteGetTopNewsTests: XCTestCase {
     func test_add_should_not_complete_if_sut_has_been_deallocated() {
         let url = URL(string: "any_url.com")!
         let httpClientSpy = HttpClientSpy()
-        var sut: RemoteGetTopNews? = RemoteGetTopNews(httpGetClient: httpClientSpy, url: url)
+        var sut: RemoteFetchTopNews? = RemoteFetchTopNews(httpGetClient: httpClientSpy, url: url)
         var result: Result<News, DomainError>?
-        sut?.getTopHeadlineNews { result = $0 }
+        sut?.fetchTopHeadlineNews { result = $0 }
         sut = nil
         httpClientSpy.completionWithError()
         XCTAssertNil(result)
@@ -56,17 +56,17 @@ class RemoteGetTopNewsTests: XCTestCase {
 
 extension RemoteGetTopNewsTests {
     
-    func makeSut(url: URL = URL(string: "any_url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (RemoteGetTopNews, HttpClientSpy) {
+    func makeSut(url: URL = URL(string: "any_url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (RemoteFetchTopNews, HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
-        let sut = RemoteGetTopNews(httpGetClient: httpClientSpy, url: url)
+        let sut = RemoteFetchTopNews(httpGetClient: httpClientSpy, url: url)
         checkMemoryLeak(for: sut)
         checkMemoryLeak(for: httpClientSpy)
         return (sut, httpClientSpy)
     }
     
-    func expect(sut: RemoteGetTopNews, expectResult: Result<News, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    func expect(sut: RemoteFetchTopNews, expectResult: Result<News, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
-        sut.getTopHeadlineNews { receivedResult in
+        sut.fetchTopHeadlineNews { receivedResult in
             switch (receivedResult, expectResult) {
             case (.failure(let receivedError), .failure(let expectedError)): XCTAssertEqual(receivedError, expectedError, file: file, line: line)
             case (.success(let receivedNews), .success(let expectedNews)): XCTAssertEqual(receivedNews, expectedNews, file: file, line: line)
@@ -88,7 +88,7 @@ extension RemoteGetTopNewsTests {
                         description: "any_description",
                         url: "any_url",
                         urlToImage: "any_url_image",
-                        publishedAt: Date(),
+                        publishedAt: "any_date",
                         content: "any_content")])
     }
     

@@ -6,6 +6,15 @@
 //
 
 import XCTest
+import Domain
+
+public final class NewsPresenter {
+    
+    public func fetchNews() {
+        
+    }
+    
+}
 
 class NewsPresenterTests: XCTestCase {
 

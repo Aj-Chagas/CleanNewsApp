@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol GetTopHeadlineNews {
-    func getTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void)
+public protocol FetchTopHeadlineNews {
+    func fetchTopHeadlineNews(completion: @escaping (Result<News, DomainError>) -> Void)
 }

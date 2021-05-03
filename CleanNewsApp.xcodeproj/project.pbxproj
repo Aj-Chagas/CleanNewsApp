@@ -22,7 +22,7 @@
 		B46719E82628FFFC00377E27 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719E72628FFFC00377E27 /* DomainError.swift */; };
 		B46719EF2629130F00377E27 /* HttpGetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719EE2629130F00377E27 /* HttpGetClient.swift */; };
 		B46719F32629133900377E27 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F22629133900377E27 /* HttpError.swift */; };
-		B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F72629139900377E27 /* RemoteGetTopNews.swift */; };
+		B46719F82629139900377E27 /* RemoteFetchTopNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46719F72629139900377E27 /* RemoteFetchTopNews.swift */; };
 		B4671A02262913F300377E27 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A01262913F300377E27 /* HttpClientSpy.swift */; };
 		B4671A092629148E00377E27 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
 		B4707D16263B6CB6007D230C /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D15263B6CB6007D230C /* URLSessionAdapter.swift */; };
@@ -33,6 +33,8 @@
 		B4707D68263B721C007D230C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B4AA7CFA264082F60039A6C5 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
 		B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */; };
+		B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
+		B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,13 @@
 			remoteGlobalIDString = B4AA7CF0264082F60039A6C5;
 			remoteInfo = Presentation;
 		};
+		B4AA7D22264084690039A6C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46719982628ED8700377E27;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +122,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B46719D72628F38E00377E27 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AA7D24264084690039A6C5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +159,7 @@
 		B46719E72628FFFC00377E27 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		B46719EE2629130F00377E27 /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
 		B46719F22629133900377E27 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
-		B46719F72629139900377E27 /* RemoteGetTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetTopNews.swift; sourceTree = "<group>"; };
+		B46719F72629139900377E27 /* RemoteFetchTopNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFetchTopNews.swift; sourceTree = "<group>"; };
 		B4671A01262913F300377E27 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		B4671A082629148E00377E27 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		B4707D15263B6CB6007D230C /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
@@ -207,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +376,7 @@
 		B46719F62629138700377E27 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B46719F72629139900377E27 /* RemoteGetTopNews.swift */,
+				B46719F72629139900377E27 /* RemoteFetchTopNews.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -584,10 +605,12 @@
 				B4AA7CED264082F60039A6C5 /* Sources */,
 				B4AA7CEE264082F60039A6C5 /* Frameworks */,
 				B4AA7CEF264082F60039A6C5 /* Resources */,
+				B4AA7D24264084690039A6C5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B4AA7D23264084690039A6C5 /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -769,7 +792,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B46719E12628FE7300377E27 /* DataExtensions.swift in Sources */,
-				B46719F82629139900377E27 /* RemoteGetTopNews.swift in Sources */,
+				B46719F82629139900377E27 /* RemoteFetchTopNews.swift in Sources */,
 				B46719F32629133900377E27 /* HttpError.swift in Sources */,
 				B46719EF2629130F00377E27 /* HttpGetClient.swift in Sources */,
 			);
@@ -851,6 +874,11 @@
 			isa = PBXTargetDependency;
 			target = B4AA7CF0264082F60039A6C5 /* Presentation */;
 			targetProxy = B4AA7CFB264082F60039A6C5 /* PBXContainerItemProxy */;
+		};
+		B4AA7D23264084690039A6C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46719982628ED8700377E27 /* Domain */;
+			targetProxy = B4AA7D22264084690039A6C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
