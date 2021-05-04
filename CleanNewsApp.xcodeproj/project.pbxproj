@@ -43,6 +43,8 @@
 		B4AA7D6B26409B360039A6C5 /* FetchTopHealineNewsSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D6A26409B360039A6C5 /* FetchTopHealineNewsSpy.swift */; };
 		B4FC414F2641FC470099175F /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FC41462641FC460099175F /* UI.framework */; };
 		B4FC41542641FC470099175F /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC41532641FC470099175F /* UITests.swift */; };
+		B4FC41952641FECA0099175F /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
+		B4FC41962641FECA0099175F /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,13 @@
 			remoteGlobalIDString = B4FC41452641FC460099175F;
 			remoteInfo = UI;
 		};
+		B4FC41972641FECA0099175F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4AA7CF0264082F60039A6C5;
+			remoteInfo = Presentation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,6 +157,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B4AA7D21264084690039A6C5 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FC41992641FECA0099175F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4FC41962641FECA0099175F /* Presentation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FC41952641FECA0099175F /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,10 +775,12 @@
 				B4FC41422641FC460099175F /* Sources */,
 				B4FC41432641FC460099175F /* Frameworks */,
 				B4FC41442641FC460099175F /* Resources */,
+				B4FC41992641FECA0099175F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B4FC41982641FECA0099175F /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -1075,6 +1098,11 @@
 			isa = PBXTargetDependency;
 			target = B4FC41452641FC460099175F /* UI */;
 			targetProxy = B4FC41502641FC470099175F /* PBXContainerItemProxy */;
+		};
+		B4FC41982641FECA0099175F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4AA7CF0264082F60039A6C5 /* Presentation */;
+			targetProxy = B4FC41972641FECA0099175F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
