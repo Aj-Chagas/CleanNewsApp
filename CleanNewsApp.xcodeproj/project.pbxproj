@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435ED6A2642143600E13A22 /* HomeViewController.swift */; };
+		B435ED7E2642146700E13A22 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
+		B435ED7F2642146700E13A22 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B45B87432637827D00883B92 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45B873A2637827C00883B92 /* Infra.framework */; };
 		B45B87482637827D00883B92 /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B87472637827D00883B92 /* InfraTests.swift */; };
 		B45B8755263782B100883B92 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
@@ -42,12 +45,19 @@
 		B4AA7D5E26409AED0039A6C5 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D5D26409AED0039A6C5 /* LoadingViewSpy.swift */; };
 		B4AA7D6B26409B360039A6C5 /* FetchTopHealineNewsSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7D6A26409B360039A6C5 /* FetchTopHealineNewsSpy.swift */; };
 		B4FC414F2641FC470099175F /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FC41462641FC460099175F /* UI.framework */; };
-		B4FC41542641FC470099175F /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC41532641FC470099175F /* UITests.swift */; };
+		B4FC41542641FC470099175F /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC41532641FC470099175F /* HomeViewControllerTests.swift */; };
 		B4FC41952641FECA0099175F /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
 		B4FC41962641FECA0099175F /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B435ED802642146700E13A22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46719982628ED8700377E27;
+			remoteInfo = Domain;
+		};
 		B45B87442637827D00883B92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B467196E2628ECF000377E27 /* Project object */;
@@ -167,6 +177,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B435ED7F2642146700E13A22 /* Domain.framework in Embed Frameworks */,
 				B4FC41962641FECA0099175F /* Presentation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -175,6 +186,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B435ED6A2642143600E13A22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B45B873A2637827C00883B92 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45B873D2637827C00883B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B45B87422637827D00883B92 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,7 +227,7 @@
 		B4FC41462641FC460099175F /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FC41492641FC470099175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4FC414E2641FC470099175F /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4FC41532641FC470099175F /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		B4FC41532641FC470099175F /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		B4FC41552641FC470099175F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B435ED7E2642146700E13A22 /* Domain.framework in Frameworks */,
 				B4FC41952641FECA0099175F /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +315,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B435ED672642140900E13A22 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B435ED6A2642143600E13A22 /* HomeViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B435ED682642141400E13A22 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC41532641FC470099175F /* HomeViewControllerTests.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		B45B873B2637827C00883B92 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +589,7 @@
 		B4FC41472641FC470099175F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B435ED672642140900E13A22 /* Scenes */,
 				B4FC41492641FC470099175F /* Info.plist */,
 			);
 			path = UI;
@@ -568,7 +598,7 @@
 		B4FC41522641FC470099175F /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				B4FC41532641FC470099175F /* UITests.swift */,
+				B435ED682642141400E13A22 /* Scenes */,
 				B4FC41552641FC470099175F /* Info.plist */,
 			);
 			path = UITests;
@@ -781,6 +811,7 @@
 			);
 			dependencies = (
 				B4FC41982641FECA0099175F /* PBXTargetDependency */,
+				B435ED812642146700E13A22 /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -844,6 +875,7 @@
 					};
 					B4FC41452641FC460099175F = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					B4FC414D2641FC470099175F = {
 						CreatedOnToolsVersion = 12.4;
@@ -1035,6 +1067,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,13 +1075,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FC41542641FC470099175F /* UITests.swift in Sources */,
+				B4FC41542641FC470099175F /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B435ED812642146700E13A22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46719982628ED8700377E27 /* Domain */;
+			targetProxy = B435ED802642146700E13A22 /* PBXContainerItemProxy */;
+		};
 		B45B87452637827D00883B92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B45B87392637827C00883B92 /* Infra */;
@@ -1632,6 +1670,7 @@
 		B4FC41572641FC470099175F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1652,6 +1691,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1659,6 +1699,7 @@
 		B4FC41582641FC470099175F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1686,6 +1727,7 @@
 		B4FC41592641FC470099175F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
@@ -1707,6 +1749,7 @@
 		B4FC415A2641FC470099175F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
