@@ -31,6 +31,7 @@ extension HomeViewControllerTests {
         let controller = HomeViewController()
         controller.fetchNews = fetchNews
         controller.loadViewIfNeeded()
+        checkMemoryLeak(for: controller)
         return controller
     }
 }
