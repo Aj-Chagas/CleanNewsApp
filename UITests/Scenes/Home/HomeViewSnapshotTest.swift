@@ -11,7 +11,8 @@ import Nimble_Snapshots
 import UIKit
 @testable import UI
 
-class MySpec: QuickSpec {
+class HomeViewSnapshotTest: QuickSpec {
+    
     override func spec() {
         
         it("has valid snapshot") {
@@ -21,4 +22,5 @@ class MySpec: QuickSpec {
         }
         
     }
+    
 }

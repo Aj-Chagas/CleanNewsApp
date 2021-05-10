@@ -401,17 +401,9 @@
 		B435ED682642141400E13A22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B4FC41532641FC470099175F /* HomeViewControllerTests.swift */,
+				B49BFBEC2649FCF400B13574 /* Home */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		B435EE412643757A00E13A22 /* Snapshot */ = {
-			isa = PBXGroup;
-			children = (
-				B435EE42264375A600E13A22 /* HomeViewSnapshotTest.swift */,
-			);
-			path = Snapshot;
 			sourceTree = "<group>";
 		};
 		B45B873B2637827C00883B92 /* Infra */ = {
@@ -627,6 +619,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		B49BFBEC2649FCF400B13574 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B435EE42264375A600E13A22 /* HomeViewSnapshotTest.swift */,
+				B4FC41532641FC470099175F /* HomeViewControllerTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B4AA7CF2264082F60039A6C5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,7 +701,6 @@
 		B4FC41522641FC470099175F /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				B435EE412643757A00E13A22 /* Snapshot */,
 				B435ED682642141400E13A22 /* Scenes */,
 				B4FC41552641FC470099175F /* Info.plist */,
 			);
