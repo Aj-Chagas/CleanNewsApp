@@ -44,6 +44,7 @@
 		B4707D36263B6E76007D230C /* URLProtocolStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D35263B6E76007D230C /* URLProtocolStubs.swift */; };
 		B4707D66263B721C007D230C /* GetNewsIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D65263B721C007D230C /* GetNewsIntegrationTests.swift */; };
 		B4707D68263B721C007D230C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
+		B49BFA4B2649EA9F00B13574 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BFA4A2649EA9F00B13574 /* HomeView.swift */; };
 		B4AA7CFA264082F60039A6C5 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
 		B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */; };
 		B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
@@ -243,6 +244,7 @@
 		B4707D63263B721C007D230C /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4707D65263B721C007D230C /* GetNewsIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNewsIntegrationTests.swift; sourceTree = "<group>"; };
 		B4707D67263B721C007D230C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49BFA4A2649EA9F00B13574 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B4A0AB8DE3E8884C8FBFA80A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		B4AA7CF1264082F60039A6C5 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AA7CF4264082F60039A6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -391,7 +393,7 @@
 		B435ED672642140900E13A22 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B435ED6A2642143600E13A22 /* HomeViewController.swift */,
+				B49BFA492649EA9100B13574 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -614,6 +616,15 @@
 				B4707D67263B721C007D230C /* Info.plist */,
 			);
 			path = UseCasesIntegrationTests;
+			sourceTree = "<group>";
+		};
+		B49BFA492649EA9100B13574 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B49BFA4A2649EA9F00B13574 /* HomeView.swift */,
+				B435ED6A2642143600E13A22 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B4AA7CF2264082F60039A6C5 /* Presentation */ = {
@@ -1388,6 +1399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */,
+				B49BFA4B2649EA9F00B13574 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

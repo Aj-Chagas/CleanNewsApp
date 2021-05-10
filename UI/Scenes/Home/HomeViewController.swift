@@ -9,18 +9,6 @@ import UIKit
 import Presentation
 import Domain
 
-class HomeView: UIView {
-    
-    override init(frame: CGRect = .zero) {
-        super.init(frame: frame)
-        backgroundColor = .darkGray
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
 class HomeViewController: UIViewController {
     
     var fetchNews: (() -> Void)?
