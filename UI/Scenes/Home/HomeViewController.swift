@@ -9,17 +9,17 @@ import UIKit
 import Presentation
 import Domain
 
-class HomeViewController: UIViewController {
+public final class HomeViewController: UIViewController {
     
-    var fetchNews: (() -> Void)?
+    public var fetchNews: (() -> Void)?
     
     private var mainView = HomeView()
 
-    override func loadView() {
+    override public func loadView() {
         self.view = mainView
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         fetchNews?()
     }
@@ -27,14 +27,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: LoadingView {
 
-    func display(viewModel: LoadingViewModel) {
+    public func display(viewModel: LoadingViewModel) {
     }
     
 }
 
 extension HomeViewController: NewsDelegate {
 
-    func didFetch(news: News?) {
+    public func didFetch(news: News?) {
     }
     
 }

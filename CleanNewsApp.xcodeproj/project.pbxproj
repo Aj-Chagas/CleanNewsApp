@@ -50,6 +50,17 @@
 		B49BFBFD2649FEF600B13574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49BFBFC2649FEF600B13574 /* Assets.xcassets */; };
 		B49BFC002649FEF700B13574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49BFBFE2649FEF700B13574 /* LaunchScreen.storyboard */; };
 		B49BFC0B2649FEF700B13574 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BFC0A2649FEF700B13574 /* MainTests.swift */; };
+		B49BFC5C264A008D00B13574 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49BFC5B264A008D00B13574 /* HomeFactory.swift */; };
+		B49BFCA2264A013100B13574 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
+		B49BFCA3264A013100B13574 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B49BFCA6264A013100B13574 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
+		B49BFCA7264A013100B13574 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B49BFCAA264A013100B13574 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45B873A2637827C00883B92 /* Infra.framework */; };
+		B49BFCAB264A013100B13574 /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B45B873A2637827C00883B92 /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B49BFCAE264A013100B13574 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
+		B49BFCAF264A013100B13574 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B49BFCB2264A013100B13574 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FC41462641FC460099175F /* UI.framework */; };
+		B49BFCB3264A013100B13574 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4FC41462641FC460099175F /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4AA7CFA264082F60039A6C5 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA7CF1264082F60039A6C5 /* Presentation.framework */; };
 		B4AA7CFF264082F60039A6C5 /* NewsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA7CFE264082F60039A6C5 /* NewsPresenterTests.swift */; };
 		B4AA7D20264084690039A6C5 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
@@ -131,6 +142,41 @@
 			remoteGlobalIDString = B49BFBF02649FEF500B13574;
 			remoteInfo = Main;
 		};
+		B49BFCA4264A013100B13574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46719BA2628F38700377E27;
+			remoteInfo = Data;
+		};
+		B49BFCA8264A013100B13574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46719982628ED8700377E27;
+			remoteInfo = Domain;
+		};
+		B49BFCAC264A013100B13574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B45B87392637827C00883B92;
+			remoteInfo = Infra;
+		};
+		B49BFCB0264A013100B13574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4AA7CF0264082F60039A6C5;
+			remoteInfo = Presentation;
+		};
+		B49BFCB4264A013100B13574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B467196E2628ECF000377E27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4FC41452641FC460099175F;
+			remoteInfo = UI;
+		};
 		B4AA7CFB264082F60039A6C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B467196E2628ECF000377E27 /* Project object */;
@@ -180,6 +226,21 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B46719D72628F38E00377E27 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49BFCB6264A013200B13574 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B49BFCA7264A013100B13574 /* Domain.framework in Embed Frameworks */,
+				B49BFCB3264A013100B13574 /* UI.framework in Embed Frameworks */,
+				B49BFCA3264A013100B13574 /* Data.framework in Embed Frameworks */,
+				B49BFCAF264A013100B13574 /* Presentation.framework in Embed Frameworks */,
+				B49BFCAB264A013100B13574 /* Infra.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +327,7 @@
 		B49BFC062649FEF700B13574 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49BFC0A2649FEF700B13574 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		B49BFC0C2649FEF700B13574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49BFC5B264A008D00B13574 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		B4A0AB8DE3E8884C8FBFA80A /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		B4AA7CF1264082F60039A6C5 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4AA7CF4264082F60039A6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -350,6 +412,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49BFCA6264A013100B13574 /* Domain.framework in Frameworks */,
+				B49BFCB2264A013100B13574 /* UI.framework in Frameworks */,
+				B49BFCA2264A013100B13574 /* Data.framework in Frameworks */,
+				B49BFCAE264A013100B13574 /* Presentation.framework in Frameworks */,
+				B49BFCAA264A013100B13574 /* Infra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +737,7 @@
 		B49BFBF22649FEF500B13574 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B49BFC5A264A007D00B13574 /* Factories */,
 				B49BFBF32649FEF500B13574 /* AppDelegate.swift */,
 				B49BFBF52649FEF500B13574 /* SceneDelegate.swift */,
 				B49BFBFC2649FEF600B13574 /* Assets.xcassets */,
@@ -686,6 +754,14 @@
 				B49BFC0C2649FEF700B13574 /* Info.plist */,
 			);
 			path = MainTests;
+			sourceTree = "<group>";
+		};
+		B49BFC5A264A007D00B13574 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B49BFC5B264A008D00B13574 /* HomeFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		B4AA7CF2264082F60039A6C5 /* Presentation */ = {
@@ -934,10 +1010,16 @@
 				B49BFBED2649FEF500B13574 /* Sources */,
 				B49BFBEE2649FEF500B13574 /* Frameworks */,
 				B49BFBEF2649FEF500B13574 /* Resources */,
+				B49BFCB6264A013200B13574 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B49BFCA5264A013100B13574 /* PBXTargetDependency */,
+				B49BFCA9264A013100B13574 /* PBXTargetDependency */,
+				B49BFCAD264A013100B13574 /* PBXTargetDependency */,
+				B49BFCB1264A013100B13574 /* PBXTargetDependency */,
+				B49BFCB5264A013100B13574 /* PBXTargetDependency */,
 			);
 			name = Main;
 			productName = Main;
@@ -1499,6 +1581,7 @@
 			files = (
 				B49BFBF42649FEF500B13574 /* AppDelegate.swift in Sources */,
 				B49BFBF62649FEF500B13574 /* SceneDelegate.swift in Sources */,
+				B49BFC5C264A008D00B13574 /* HomeFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1598,6 +1681,31 @@
 			target = B49BFBF02649FEF500B13574 /* Main */;
 			targetProxy = B49BFC072649FEF700B13574 /* PBXContainerItemProxy */;
 		};
+		B49BFCA5264A013100B13574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46719BA2628F38700377E27 /* Data */;
+			targetProxy = B49BFCA4264A013100B13574 /* PBXContainerItemProxy */;
+		};
+		B49BFCA9264A013100B13574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46719982628ED8700377E27 /* Domain */;
+			targetProxy = B49BFCA8264A013100B13574 /* PBXContainerItemProxy */;
+		};
+		B49BFCAD264A013100B13574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B45B87392637827C00883B92 /* Infra */;
+			targetProxy = B49BFCAC264A013100B13574 /* PBXContainerItemProxy */;
+		};
+		B49BFCB1264A013100B13574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4AA7CF0264082F60039A6C5 /* Presentation */;
+			targetProxy = B49BFCB0264A013100B13574 /* PBXContainerItemProxy */;
+		};
+		B49BFCB5264A013100B13574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4FC41452641FC460099175F /* UI */;
+			targetProxy = B49BFCB4264A013100B13574 /* PBXContainerItemProxy */;
+		};
 		B4AA7CFC264082F60039A6C5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B4AA7CF0264082F60039A6C5 /* Presentation */;
@@ -1646,6 +1754,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Infra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1676,6 +1785,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Infra/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1700,6 +1810,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = InfraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1723,6 +1834,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = InfraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1873,6 +1985,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1903,6 +2016,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1932,6 +2046,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1962,6 +2077,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1986,6 +2102,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = DataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2009,6 +2126,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = DataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2161,6 +2279,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Presentation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2191,6 +2310,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Presentation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2215,6 +2335,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = PresentationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2238,6 +2359,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = PresentationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2266,6 +2388,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2296,6 +2419,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2319,6 +2443,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2341,6 +2466,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TA48V9TKT7;
 				INFOPLIST_FILE = UITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
