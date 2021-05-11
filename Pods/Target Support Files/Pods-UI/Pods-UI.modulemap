@@ -1,4 +1,4 @@
-module Pods_UI {
+framework module Pods_UI {
   umbrella header "Pods-UI-umbrella.h"
 
   export *
