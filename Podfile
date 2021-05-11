@@ -2,8 +2,6 @@ platform :ios, '13.0'
 
 target 'Data' do
 
-  use_frameworks!
-
   # Pods for Data
 
   target 'DataTests' do
@@ -14,15 +12,11 @@ end
 
 target 'Domain' do
 
-  use_frameworks!
-
   # Pods for Domain
 
 end
 
 target 'Infra' do
-
-  use_frameworks!
 
   # Pods for Infra
 
@@ -34,8 +28,6 @@ end
 
 target 'Presentation' do
 
-  use_frameworks!
-
   # Pods for Presentation
 
   target 'PresentationTests' do
@@ -46,8 +38,9 @@ end
 
 target 'UI' do
 
-  use_frameworks!
-
+  #use_frameworks!
+  pod 'SnapKit', '~> 5.0.0'
+  
   # Pods for UI
 
   target 'UITests' do
