@@ -22,6 +22,7 @@
 		B435ED7F2642146700E13A22 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B435EDA72642179D00E13A22 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4671A082629148E00377E27 /* TestExtensions.swift */; };
 		B435EE43264375A600E13A22 /* HomeViewSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435EE42264375A600E13A22 /* HomeViewSnapshotTest.swift */; };
+		B4566F72264B526200AFA660 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4566F71264B526200AFA660 /* CodeView.swift */; };
 		B45B87432637827D00883B92 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B45B873A2637827C00883B92 /* Infra.framework */; };
 		B45B87482637827D00883B92 /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B87472637827D00883B92 /* InfraTests.swift */; };
 		B45B8755263782B100883B92 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719BB2628F38700377E27 /* Data.framework */; };
@@ -295,6 +296,7 @@
 		AF6169734F97B88774AD81B1 /* Pods-Presentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Presentation.debug.xcconfig"; path = "Target Support Files/Pods-Presentation/Pods-Presentation.debug.xcconfig"; sourceTree = "<group>"; };
 		B435ED6A2642143600E13A22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B435EE42264375A600E13A22 /* HomeViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotTest.swift; sourceTree = "<group>"; };
+		B4566F71264B526200AFA660 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		B45B873A2637827C00883B92 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45B873D2637827C00883B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B45B87422637827D00883B92 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -520,6 +522,14 @@
 				B49BFBEC2649FCF400B13574 /* Home */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B4566F70264B525700AFA660 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4566F71264B526200AFA660 /* CodeView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B45B873B2637827C00883B92 /* Infra */ = {
@@ -844,6 +854,7 @@
 		B4FC41472641FC470099175F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B4566F70264B525700AFA660 /* Helpers */,
 				B435ED672642140900E13A22 /* Scenes */,
 				B4FC41492641FC470099175F /* Info.plist */,
 			);
@@ -1700,6 +1711,7 @@
 			files = (
 				B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */,
 				B49BFA4B2649EA9F00B13574 /* HomeView.swift in Sources */,
+				B4566F72264B526200AFA660 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
