@@ -18,7 +18,7 @@ class CardViewSnapshotTest: QuickSpec {
         it("has valid snapshot") {
             let frame = CGRect(x: 0, y: 0, width: 375, height: 620)
             let view = CardView(frame: frame)
-            expect(view) == snapshot()
+            expect(view) == recordSnapshot()
             
         }
         

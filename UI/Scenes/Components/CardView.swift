@@ -8,7 +8,8 @@
 import UIKit
 import SnapKit
 
-class CardView: UIView {
+// try transformation this class in UIVIEW
+class CardView: UITableViewCell {
     
     lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
@@ -18,7 +19,7 @@ class CardView: UIView {
         return view
     }()
     
-    lazy var imageView: UIImageView = {
+    lazy var imageV: UIImageView = {
         let view = UIImageView(frame: .zero)
         view.backgroundColor = .darkGray
         return view
@@ -42,8 +43,10 @@ class CardView: UIView {
         return view
     }()
     
-    override init(frame: CGRect = .zero) {
-        super.init(frame: frame)
+    static let kIdentifier = "CardViewId"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
     }
     
@@ -53,7 +56,7 @@ class CardView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.roundCorners([.topLeft, .topRight], radius: 8)
+        imageV.roundCorners([.topLeft, .topRight], radius: 8)
     }
 }
 
@@ -61,7 +64,7 @@ extension CardView: CodeView {
     
     func buildViewHierarchy() {
         addSubview(containerView)
-        addSubview(imageView)
+        addSubview(imageV)
         addSubview(title)
         addSubview(subTitle)
     }
@@ -75,16 +78,16 @@ extension CardView: CodeView {
             make.bottom.equalToSuperview().inset(16)
         }
         
-        imageView.snp.makeConstraints { make in
+        imageV.snp.makeConstraints { make in
             make.top.equalTo(containerView)
             make.left.equalTo(containerView)
             make.right.equalTo(containerView)
         }
 
         title.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(8)
-            make.left.equalTo(imageView).offset(8)
-            make.right.equalTo(imageView).inset(8)
+            make.top.equalTo(imageV.snp.bottom).offset(8)
+            make.left.equalTo(imageV).offset(8)
+            make.right.equalTo(imageV).inset(8)
         }
         
         subTitle.snp.makeConstraints { make in

@@ -17,6 +17,15 @@ class HomeView: UIView {
         return view
     }()
     
+    lazy var tableView: UITableView = {
+        let table = UITableView(frame: .zero)
+        table.rowHeight = CGFloat(400)
+        table.isScrollEnabled = true
+        table.backgroundColor = .white
+        table.register(CardView.self, forCellReuseIdentifier: CardView.kIdentifier)
+        return table
+    }()
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
@@ -31,6 +40,7 @@ extension HomeView: CodeView {
 
     func buildViewHierarchy() {
         addSubview(title)
+        addSubview(tableView)
     }
     
     func setupConstraint() {
@@ -38,6 +48,13 @@ extension HomeView: CodeView {
             make.top.equalToSuperview().offset(48)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().inset(16)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(title.snp.bottom).offset(16)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
     
