@@ -11,7 +11,7 @@ import Presentation
 import Data
 import Infra
 
-class ImageFake: ImageNetwork {
+class ImageFake: NetworkImage {
     func loadImage() {
     }
 }

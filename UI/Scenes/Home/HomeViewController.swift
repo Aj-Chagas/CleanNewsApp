@@ -15,11 +15,11 @@ public final class HomeViewController: UIViewController {
     
     public var mainView: HomeView
     
-    public let imageNetwork: ImageNetwork
+    public let imageNetwork: NetworkImage
     
     var news: [Article]?
 
-    public init(mainView: HomeView, imageNetwork: ImageNetwork) {
+    public init(mainView: HomeView, imageNetwork: NetworkImage) {
         self.imageNetwork = imageNetwork
         self.mainView = mainView
         super.init(nibName: nil, bundle: nil)
