@@ -28,6 +28,10 @@ extension UIView {
         self.layer.mask = maskLayer
     }
     
+    func safeArea() -> CGFloat {
+        self.safeAreaLayoutGuide.layoutFrame.size.height
+    }
+    
 }
 
 extension UIImageView {

@@ -44,6 +44,8 @@ class CardViewCell: UITableViewCell {
     
     static let kIdentifier = "CardViewId"
     
+    // MARK: - Functions
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()

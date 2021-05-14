@@ -10,15 +10,8 @@ import SnapKit
 
 class HomeView: UIView {
     
-    lazy var title: UILabel = {
-        let view = UILabel(frame: .zero)
-        view.text = "Notícias"
-        view.font = UIFont.boldSystemFont(ofSize: 32)
-        return view
-    }()
-    
     lazy var tableView: UITableView = {
-        let table = UITableView(frame: .zero)
+        let table = UITableView(frame: .zero, style: .grouped)
         table.rowHeight = CGFloat(400)
         table.isScrollEnabled = true
         table.backgroundColor = .white
@@ -41,19 +34,13 @@ class HomeView: UIView {
 extension HomeView: CodeView {
 
     func buildViewHierarchy() {
-        addSubview(title)
         addSubview(tableView)
     }
     
     func setupConstraint() {
-        title.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(48)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().inset(16)
-        }
         
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(title.snp.bottom).offset(16)
+            make.top.equalToSuperview().offset(self.safeArea())
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()

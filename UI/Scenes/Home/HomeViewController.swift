@@ -27,9 +27,10 @@ public final class HomeViewController: UIViewController {
         fetchNews?()
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        mainView.tableView.tableHeaderView = HeaderView()
     }
 }
 
@@ -56,6 +57,10 @@ extension HomeViewController: NewsDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return HeaderView()
+    }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         news?.count ?? 0
