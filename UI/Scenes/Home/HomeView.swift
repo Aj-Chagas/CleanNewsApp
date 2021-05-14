@@ -22,6 +22,8 @@ class HomeView: UIView {
         table.rowHeight = CGFloat(400)
         table.isScrollEnabled = true
         table.backgroundColor = .white
+        table.allowsSelection = false
+        table.separatorStyle = .none
         table.register(CardViewCell.self, forCellReuseIdentifier: CardViewCell.kIdentifier)
         return table
     }()
