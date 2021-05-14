@@ -11,16 +11,14 @@ import Nimble_Snapshots
 import UIKit
 @testable import UI
 
-class CardViewSnapshotTest: QuickSpec {
+class CardViewCellSnapshotTest: QuickSpec {
     
     override func spec() {
         
         it("has valid snapshot") {
-            let frame = CGRect(x: 0, y: 0, width: 375, height: 620)
             let view = CardViewCell()
-            view.frame = frame
+            view.frame = iphone8Frame()
             expect(view) == snapshot()
-            
         }
         
     }
