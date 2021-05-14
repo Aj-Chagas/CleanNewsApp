@@ -15,7 +15,7 @@ public final class HomeViewController: UIViewController {
     
     private var mainView = HomeView()
     
-    private var news: [Article]?
+    internal var news: [Article]?
 
     override public func loadView() {
         self.view = mainView
@@ -52,32 +52,6 @@ extension HomeViewController: NewsDelegate {
         DispatchQueue.main.async {
             self.mainView.tableView.reloadData()
         }
-    }
-    
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return HeaderView()
-    }
-
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        news?.count ?? 0
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardViewCell.kIdentifier, for: indexPath) as? CardViewCell else {
-            return UITableViewCell()
-        }
-        cell.title.text = news?[indexPath.row].title
-        cell.subTitle.text = news?[indexPath.row].description
-        
-        return cell
-    }
-    
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        1
     }
     
 }
