@@ -38,16 +38,6 @@
                ReferencedContainer = "container:CleanNewsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B48E9261264F424400469B0C"
-               BuildableName = "NetworkImageTests.xctest"
-               BlueprintName = "NetworkImageTests"
-               ReferencedContainer = "container:CleanNewsApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
