@@ -13,9 +13,21 @@ public final class HomeViewController: UIViewController {
     
     public var fetchNews: (() -> Void)?
     
-    private var mainView = HomeView()
+    public var mainView: HomeView
     
-    internal var news: [Article]?
+    public let imageNetwork: ImageNetwork
+    
+    var news: [Article]?
+
+    public init(mainView: HomeView, imageNetwork: ImageNetwork) {
+        self.imageNetwork = imageNetwork
+        self.mainView = mainView
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override public func loadView() {
         self.view = mainView

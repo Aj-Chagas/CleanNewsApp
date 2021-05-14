@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ImageNetwork {
+public protocol ImageNetwork {
     func loadImage()
 }

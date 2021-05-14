@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeView: UIView {
+public final class HomeView: UIView {
     
     lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)

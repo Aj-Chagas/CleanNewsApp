@@ -11,9 +11,14 @@ import Presentation
 import Data
 import Infra
 
+class ImageFake: ImageNetwork {
+    func loadImage() {
+    }
+}
+
 class HomeFactory {
     static func makeViewController() -> HomeViewController {
-        let controller = HomeViewController()
+        let controller = HomeViewController(mainView: HomeView(), imageNetwork: ImageFake())
         let client = URLSessionAdapter()
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=288e2e5064f4453bb4686e65de93e1e3")!
         let remoteNews = RemoteFetchTopNews(httpGetClient: client, url: url)
