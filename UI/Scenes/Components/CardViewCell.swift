@@ -8,8 +8,7 @@
 import UIKit
 import SnapKit
 
-// try transformation this class in UIVIEW
-class CardView: UITableViewCell {
+class CardViewCell: UITableViewCell {
     
     lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
@@ -60,7 +59,7 @@ class CardView: UITableViewCell {
     }
 }
 
-extension CardView: CodeView {
+extension CardViewCell: CodeView {
     
     func buildViewHierarchy() {
         addSubview(containerView)

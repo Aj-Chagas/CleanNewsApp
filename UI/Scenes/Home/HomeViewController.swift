@@ -62,7 +62,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardView.kIdentifier, for: indexPath) as? CardView else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CardViewCell.kIdentifier, for: indexPath) as? CardViewCell else {
             return UITableViewCell()
         }
         cell.title.text = news?[indexPath.row].title

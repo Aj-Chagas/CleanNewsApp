@@ -22,7 +22,7 @@ class HomeView: UIView {
         table.rowHeight = CGFloat(400)
         table.isScrollEnabled = true
         table.backgroundColor = .white
-        table.register(CardView.self, forCellReuseIdentifier: CardView.kIdentifier)
+        table.register(CardViewCell.self, forCellReuseIdentifier: CardViewCell.kIdentifier)
         return table
     }()
     
