@@ -31,5 +31,9 @@ extension UIColor {
             alpha: alpha
         )
     }
+    
+    static func hex605751() -> UIColor {
+        return UIColor(hexdecimal: 0x605751)
+    }
 
 }

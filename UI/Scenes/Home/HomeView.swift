@@ -12,7 +12,7 @@ public final class HomeView: UIView {
     
     lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.rowHeight = CGFloat(400)
+        table.rowHeight = UIScreen.main.bounds.height / 1.6
         table.isScrollEnabled = true
         table.backgroundColor = .white
         table.allowsSelection = false
