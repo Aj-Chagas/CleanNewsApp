@@ -29,7 +29,11 @@ extension UIView {
     }
     
     func safeArea() -> UIEdgeInsets {
-        return UIApplication.shared.windows[0].safeAreaInsets
+        let windows = UIApplication.shared.windows
+        if windows.count > 0 {
+            return windows[0].safeAreaInsets
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
 }
