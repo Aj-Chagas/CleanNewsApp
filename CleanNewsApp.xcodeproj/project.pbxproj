@@ -21,6 +21,7 @@
 		B40E17BA264C9069005F3BAF /* CardViewCellSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E17B9264C9069005F3BAF /* CardViewCellSnapshotTest.swift */; };
 		B40E17E1264C9979005F3BAF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E17E0264C9979005F3BAF /* UIViewExtension.swift */; };
 		B40E17EA264CA753005F3BAF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E17E9264CA753005F3BAF /* UIColorExtension.swift */; };
+		B42ACE0026507C4200B0B92E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D2C263B6DF8007D230C /* TestFactories.swift */; };
 		B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435ED6A2642143600E13A22 /* HomeViewController.swift */; };
 		B435ED7E2642146700E13A22 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B435ED7F2642146700E13A22 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -1797,6 +1798,7 @@
 				B40E17BA264C9069005F3BAF /* CardViewCellSnapshotTest.swift in Sources */,
 				B48E9232264F33E200469B0C /* HeaderViewSnapshotTest.swift in Sources */,
 				B435EDA72642179D00E13A22 /* TestExtensions.swift in Sources */,
+				B42ACE0026507C4200B0B92E /* TestFactories.swift in Sources */,
 				B48E9204264DF87700469B0C /* SnapshotTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

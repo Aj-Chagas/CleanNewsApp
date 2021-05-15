@@ -21,7 +21,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CardViewCell.kIdentifier, for: indexPath) as? CardViewCell else {
             return UITableViewCell()
         }
-        
+        bindCardViewCell(cell: cell, indexPath: indexPath)
+        return cell
+    }
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    private func bindCardViewCell(cell: CardViewCell, indexPath: IndexPath) {
         if let safeStringUrl = news?[indexPath.row].urlToImage,
            let safeUrl = URL(string: safeStringUrl) {
             cell.imageV.loadNetworkImage(url: safeUrl)
@@ -31,13 +39,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.title.text = news?[indexPath.row].title
         cell.subTitle.text = news?[indexPath.row].description
-        
-        
-        return cell
-    }
-    
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        1
     }
     
 }
