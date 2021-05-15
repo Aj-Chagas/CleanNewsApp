@@ -22,6 +22,7 @@ end
 target 'UI' do
 
   pod 'SnapKit', '~> 5.0.0'
+  pod 'SDWebImage', '~> 5.11.1'
 
   target 'UITests' do
     pod 'Nimble', '~> 9.0.1'

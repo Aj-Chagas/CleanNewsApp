@@ -28,8 +28,8 @@ extension UIView {
         self.layer.mask = maskLayer
     }
     
-    func safeArea() -> CGFloat {
-        self.safeAreaLayoutGuide.layoutFrame.size.height
+    func safeArea() -> UIEdgeInsets {
+        return UIApplication.shared.windows[0].safeAreaInsets
     }
     
 }

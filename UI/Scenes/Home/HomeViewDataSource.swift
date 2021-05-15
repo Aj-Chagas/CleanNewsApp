@@ -21,8 +21,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CardViewCell.kIdentifier, for: indexPath) as? CardViewCell else {
             return UITableViewCell()
         }
+        
+        if let safeStringUrl = news?[indexPath.row].urlToImage,
+           let safeUrl = URL(string: safeStringUrl) {
+            cell.imageV.loadNetworkImage(url: safeUrl)
+        } else {
+            //image default
+        }
+        
         cell.title.text = news?[indexPath.row].title
         cell.subTitle.text = news?[indexPath.row].description
+        
         
         return cell
     }

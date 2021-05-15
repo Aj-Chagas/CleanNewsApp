@@ -40,7 +40,7 @@ extension HomeView: CodeView {
     func setupConstraint() {
         
         tableView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(self.safeArea())
+            make.top.equalToSuperview().offset(self.safeArea().top)
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
