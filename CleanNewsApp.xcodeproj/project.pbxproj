@@ -22,6 +22,7 @@
 		B40E17E1264C9979005F3BAF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E17E0264C9979005F3BAF /* UIViewExtension.swift */; };
 		B40E17EA264CA753005F3BAF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40E17E9264CA753005F3BAF /* UIColorExtension.swift */; };
 		B42ACE0026507C4200B0B92E /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4707D2C263B6DF8007D230C /* TestFactories.swift */; };
+		B42ACE09265090E900B0B92E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42ACE08265090E900B0B92E /* DateExtension.swift */; };
 		B435ED6B2642143600E13A22 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B435ED6A2642143600E13A22 /* HomeViewController.swift */; };
 		B435ED7E2642146700E13A22 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; };
 		B435ED7F2642146700E13A22 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B46719992628ED8700377E27 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -308,6 +309,7 @@
 		B40E17B9264C9069005F3BAF /* CardViewCellSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCellSnapshotTest.swift; sourceTree = "<group>"; };
 		B40E17E0264C9979005F3BAF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B40E17E9264CA753005F3BAF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		B42ACE08265090E900B0B92E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B435ED6A2642143600E13A22 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B435EE42264375A600E13A22 /* HomeViewSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotTest.swift; sourceTree = "<group>"; };
 		B4566F71264B526200AFA660 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 				B40E17E0264C9979005F3BAF /* UIViewExtension.swift */,
 				B40E17E9264CA753005F3BAF /* UIColorExtension.swift */,
 				B48E92FD264F496000469B0C /* UIImageView.swift */,
+				B42ACE08265090E900B0B92E /* DateExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -1786,6 +1789,7 @@
 				B40E17EA264CA753005F3BAF /* UIColorExtension.swift in Sources */,
 				B48E9229264F317C00469B0C /* HeaderView.swift in Sources */,
 				B48E92FE264F496000469B0C /* UIImageView.swift in Sources */,
+				B42ACE09265090E900B0B92E /* DateExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

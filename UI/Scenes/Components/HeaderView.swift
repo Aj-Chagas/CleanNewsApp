@@ -12,7 +12,7 @@ class HeaderView: UIView {
     
     var dateLabel: UILabel = {
         let view = UILabel()
-        view.text = "sexta-feira, 14 de maio"
+        view.text = Date().dateFormatter_weekDay_day_moth()
         view.font = UIFont.systemFont(ofSize: 14)
         return view
     }()
@@ -20,7 +20,7 @@ class HeaderView: UIView {
     var title: UILabel = {
         let view = UILabel()
         view.text = "Hoje"
-        view.font = UIFont.boldSystemFont(ofSize: 24)
+        view.font = UIFont.boldSystemFont(ofSize: 32)
         return view
     }()
     
