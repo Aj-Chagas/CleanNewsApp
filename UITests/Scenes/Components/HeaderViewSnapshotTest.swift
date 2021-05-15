@@ -16,7 +16,9 @@ class HeaderViewSnapshotTest: QuickSpec {
     override func spec() {
         
         it("has valid snapshot") {
-            let view = HeaderView(frame: iphone8Frame())
+            let frame = CGRect(x: 0, y: 0, width: 375, height: 70)
+            let view = HeaderView(frame: frame)
+            view.dateLabel.text = "sexta-feira, 14 de maio"
             expect(view) == snapshot()
         }
         

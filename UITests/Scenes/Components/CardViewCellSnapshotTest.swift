@@ -18,6 +18,8 @@ class CardViewCellSnapshotTest: QuickSpec {
         it("has valid snapshot") {
             let view = CardViewCell()
             view.frame = iphone8Frame()
+            view.title.text = "News"
+            view.subTitle.text = "subtitle"
             expect(view) == snapshot()
         }
         

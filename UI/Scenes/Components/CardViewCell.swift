@@ -26,7 +26,6 @@ class CardViewCell: UITableViewCell {
     
     lazy var title: UILabel = {
         let view = UILabel(frame: .zero)
-        view.text = "News"
         view.font = UIFont.boldSystemFont(ofSize: 16)
         view.adjustsFontSizeToFitWidth = false
         view.minimumScaleFactor = 0.9
@@ -36,7 +35,6 @@ class CardViewCell: UITableViewCell {
     
     lazy var subTitle: UILabel = {
         let view = UILabel(frame: .zero)
-        view.text = "subtitle"
         view.font = UIFont.boldSystemFont(ofSize: 14)
         view.textColor = UIColor.hex605751()
         view.adjustsFontSizeToFitWidth = true
