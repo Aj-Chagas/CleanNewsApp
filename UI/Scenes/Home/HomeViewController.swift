@@ -36,6 +36,11 @@ public final class HomeViewController: UIViewController {
         fetchNews?()
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setupTableView() {
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
