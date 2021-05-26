@@ -1,4 +1,4 @@
-# 🚧 Clean News App *em construção*  🚧 
+# 🚧 Clean News App *-em construção-*  🚧 
 
 ## **Objetivo**
 #### O objetivo da criação desse projeto foi para praticar e exercitar todo o conteúdo que eu aprendi até aqui sobre clean architecture. Além disso, o app está sendo desenvolvido em view code (com testes de snapshot) e estou trabalhando com TDD durante todo o desenvolvimento, para garantir qualidade e um taxa de cobertura próxima de 100%.
