@@ -1,7 +1,7 @@
 # 🚧 Clean News App *em construção*  🚧 
 
 ## **Objetivo**
-#### O objetivo da criação desse projeto foi para praticar e execitar todo o conteúdo que eu aprendi até aqui sobre clean architecture. Além disso, o app está sendo desenvolvido em view code (com testes de snapshot) e estou trabalhando com TDD durante todo o desenvolvimento, para garantir qualidade e um taxa de cobertura próxima de 100%.
+#### O objetivo da criação desse projeto foi para praticar e exercitar todo o conteúdo que eu aprendi até aqui sobre clean architecture. Além disso, o app está sendo desenvolvido em view code (com testes de snapshot) e estou trabalhando com TDD durante todo o desenvolvimento, para garantir qualidade e um taxa de cobertura próxima de 100%.
 
 ## **Arquitetura**
 #### O app está construído utilizando o clean architecture + o pattern composition roots, ou seja, temos uma camada extra nesse caso que é o main layer e é nela que fica a responsabilidade de fazer a composição de todas as outras camadas.
